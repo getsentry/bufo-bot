@@ -1,12 +1,15 @@
+from __future__ import annotations
+
 import os
 
-# Use the package we installed
 from slack_bolt import App
+
+# Use the package we installed
 
 # Initialize your app with your bot token and signing secret
 app = App(
     token=os.environ.get("SLACK_BOT_TOKEN"),
-    signing_secret=os.environ.get("SLACK_SIGNING_SECRET")
+    signing_secret=os.environ.get("SLACK_SIGNING_SECRET"),
 )
 
 
@@ -21,51 +24,50 @@ def update_home_tab(client, event, logger):
             view={
                 "type": "home",
                 "callback_id": "home_view",
-
                 # body of the view
                 "blocks": [
                     {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "*Welcome to your _App's Home tab_* :tada:"
-                        }
+                            "text": "*Welcome to your _App's Home tab_* :tada:",
+                        },
                     },
-                    {
-                        "type": "divider"
-                    },
+                    {"type": "divider"},
                     {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "This button won't do much for now but you can set up a listener for it using the `actions()` method and passing its unique `action_id`. See an example in the `examples` folder within your Bolt app."
-                        }
+                            "text": "This button won't do much for now but you can set up a listener for it using the `actions()` method and passing its unique `action_id`. See an example in the `examples` folder within your Bolt app.",
+                        },
                     },
                     {
                         "type": "actions",
                         "elements": [
                             {
                                 "type": "button",
-                                "text": {
-                                    "type": "plain_text",
-                                    "text": "Click me!"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
+                                "text": {"type": "plain_text", "text": "Click me!"},
+                            },
+                        ],
+                    },
+                ],
+            },
         )
 
     except Exception as e:
         logger.error(f"Error publishing home tab: {e}")
+
 
 @app.event("app_mention")
 def respond(client, event, logger):
     print(client)
     print(event)
     print(logger)
-    client.chat_postEphemeral(user=event["user"], channel=event['channel'], text="Hello!")
+    client.chat_postEphemeral(
+        user=event["user"],
+        channel=event["channel"],
+        text="Hello!",
+    )
 
 
 # The echo command simply echoes on command
