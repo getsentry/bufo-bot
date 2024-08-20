@@ -27,7 +27,7 @@ def bufo(ack, respond, command):
     validated_suggestions = bufo_suggester.validate_bufos_suggestions(suggested_emojis)
 
     # Respond with the suggested emojis
-    respond(f"Suggested Bufo emojis: {validated_suggestions}")
+    respond(f"Bufos for `{user_input}`:\n{validated_suggestions}")
 
 
 if __name__ == "__main__":

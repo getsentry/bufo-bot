@@ -76,7 +76,7 @@ class BufoSuggester:
     def validate_bufos_suggestions(self, suggestions: str) -> str:
         emojis = suggestions.split()
         validated_emojis = [emoji for emoji in emojis if emoji in self.emoji_list]
-        return " ".join([f":{emoji}:" for emoji in validated_emojis])
+        return "\n".join([f":{emoji}: `:{emoji}:`" for emoji in validated_emojis])
 
 
 # This is a simple main function to test the BufoSuggester class
