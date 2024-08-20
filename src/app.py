@@ -52,5 +52,14 @@ def bufo(ack, respond, command):
 
     respond(text=output_str)
 
+@app.event("app_mention")
+def handle_app_mention(body, say, event):
+    user_input = event['text']
+
+    if "random" in user_input:
+        emoji = random.choice(bufo_suggester.emoji_list)
+        say(f":{emoji}:")
+
+
 if __name__ == "__main__":
     app.start(port=int(os.environ.get("PORT", 3000)))
