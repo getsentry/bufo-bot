@@ -24,9 +24,10 @@ def bufo(ack, respond, command):
 
     # Get OpenAI response for the user input
     suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
+    validated_suggestions = bufo_suggester.validate_bufos_suggestions(suggested_emojis)
 
     # Respond with the suggested emojis
-    respond(f"Suggested Bufo emojis: {suggested_emojis}")
+    respond(f"Suggested Bufo emojis: {validated_suggestions}")
 
 
 if __name__ == "__main__":

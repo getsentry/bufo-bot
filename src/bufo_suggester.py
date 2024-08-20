@@ -1,4 +1,5 @@
 import os
+from wsgiref import validate
 
 import anthropic
 from dotenv import load_dotenv
@@ -10,7 +11,7 @@ MODEL_TYPE = "gpt-4o-mini"
 
 PROMPT_DIR = "prompts"
 PROMPT_FILE = "bufo_prompt.md"
-EMOJI_LIST_FILE = "bufo_emoji_list.md"
+EMOJI_LIST_FILE = "bufo_emoji_list.txt"
 
 
 class BufoSuggester:
@@ -24,8 +25,12 @@ class BufoSuggester:
         else:
             raise ValueError("Invalid client type")
 
-        self.system_prompt = self._load_file(PROMPT_FILE)
-        self.emoji_list = self._load_file(EMOJI_LIST_FILE)
+        instructions = self._load_file(PROMPT_FILE)
+        emojis = self._load_file(EMOJI_LIST_FILE)
+        self.emoji_list = emojis.split()
+
+        self.system_prompt = instructions + "\n\n" + emojis
+
 
     @staticmethod
     def _load_file(filename: str) -> str:
@@ -39,7 +44,6 @@ class BufoSuggester:
                 model=MODEL_TYPE,
                 messages=[
                     {"role": "system", "content": self.system_prompt},
-                    {"role": "system", "content": self.emoji_list},
                     {"role": "user", "content": user_input}
                 ]
             )
@@ -51,7 +55,7 @@ class BufoSuggester:
                 model="claude-3-5-sonnet-20240620",
                 max_tokens=1000,
                 temperature=0,
-                system=self.emoji_list + "\n" + self.system_prompt,
+                system=self.system_prompt,
                 messages=[
                     {
                         "role": "user",
@@ -69,13 +73,20 @@ class BufoSuggester:
 
         return ""
 
+    def validate_bufos_suggestions(self, suggestions: str) -> str:
+        emojis = suggestions.split()
+        validated_emojis = [emoji for emoji in emojis if emoji in self.emoji_list]
+        return " ".join([f":{emoji}:" for emoji in validated_emojis])
+
 
 # This is a simple main function to test the BufoSuggester class
 def main():
     suggester = BufoSuggester()
     user_text = input("Enter your message: ")
     suggestions = suggester.get_bufo_suggestions(user_text)
-    print(f"Suggested Bufo emojis: {suggestions}")
+    validated_suggestions = suggester.validate_bufos_suggestions(suggestions)
+
+    print(f"Suggested Bufo emojis: {validated_suggestions}")
 
 
 if __name__ == "__main__":
