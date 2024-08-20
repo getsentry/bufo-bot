@@ -3,3 +3,4 @@ ruff==0.6.1
 slack-bolt
 openai
 python-dotenv
+anthropic
