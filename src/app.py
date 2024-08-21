@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import os
 import random
-from dotenv import load_dotenv
-from slack_bolt import App
 
 from bufo_suggester import BufoSuggester
+from dotenv import load_dotenv
+from slack_bolt import App
 
 load_dotenv()
 
@@ -29,18 +29,19 @@ THINKING_EMOJIS = [
     ":bufo-pushes-to-prod:",
     ":bufo-poof:",
     ":bufo-took-too-much:",
-    ":bufo-riding-goose:"
+    ":bufo-riding-goose:",
 ]
+
 
 @app.command("/bufo")
 def bufo(ack, respond, command):
     ack()
-    user_input = command['text']
+    user_input = command["text"]
 
     # Send an ephemeral thinking message
     app.client.chat_postEphemeral(
-        channel=command['channel_id'],
-        user=command['user_id'],
+        channel=command["channel_id"],
+        user=command["user_id"],
         text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
     )
 
@@ -52,9 +53,10 @@ def bufo(ack, respond, command):
 
     respond(text=output_str)
 
+
 @app.event("app_mention")
 def handle_app_mention(body, say, event):
-    user_input = event['text']
+    user_input = event["text"].lower()
 
     if "random" in user_input:
         emoji = random.choice(bufo_suggester.emoji_list)
