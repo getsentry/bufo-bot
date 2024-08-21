@@ -67,6 +67,12 @@ def bufo(ack, respond, command):
     respond(text=output_str)
 
 
+@app.command("/bigbufo")
+def big_bufo(ack, respond, command):
+    ack()
+    respond(text=random.choice(BIG_BUFOS))
+
+
 @app.event("app_mention")
 def handle_app_mention(body, say, event):
     user_input = event["text"].lower()
@@ -77,7 +83,6 @@ def handle_app_mention(body, say, event):
 
     if "bigbufo" in user_input:
         emoji = random.choice(BIG_BUFOS)
-        say("Getting you a **BIG BUFO**")
         say(f"{emoji}")
 
 
