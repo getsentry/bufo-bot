@@ -32,6 +32,19 @@ THINKING_EMOJIS = [
     ":bufo-riding-goose:",
 ]
 
+BIG_BUFOS = [
+    """
+    :bigbufo_0_0::bigbufo_1_0::bigbufo_2_0::bigbufo_3_0:\n
+    :bigbufo_0_1::bigbufo_1_1::bigbufo_2_1::bigbufo_3_1:\n
+    :bigbufo_0_2::bigbufo_1_2::bigbufo_2_2::bigbufo_3_2:\n
+    :bigbufo_0_3::bigbufo_1_3::bigbufo_2_3::bigbufo_3_3:
+    """,
+    """
+    :yay-bufo-1::yay-bufo-2:\n
+    :yay-bufo-3::yay-bufo-4:
+    """,
+]
+
 
 @app.command("/bufo")
 def bufo(ack, respond, command):
@@ -61,6 +74,10 @@ def handle_app_mention(body, say, event):
     if "random" in user_input:
         emoji = random.choice(bufo_suggester.emoji_list)
         say(f":{emoji}:")
+
+    if "bigbufo" in user_input:
+        emoji = random.choice(BIG_BUFOS)
+        say(f"BIG BUFO {emoji}")
 
 
 if __name__ == "__main__":
