@@ -77,7 +77,7 @@ def handle_app_mention(body, say, event):
 
     if "bigbufo" in user_input:
         emoji = random.choice(BIG_BUFOS)
-        say(f"BIG BUFO {emoji}")
+        say(f"Getting you a BIG BUFO {emoji}")
 
 
 if __name__ == "__main__":
