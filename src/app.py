@@ -147,7 +147,16 @@ def handle_app_mention(say, event, context):
         response = bufo_suggester.build_bufo_suggestions_response(validated_suggestions)
 
         output_str = f"Bufos for `{user_input}`:\n{response}"
-        say(output_str)
+
+        # Respond with the suggested bufos, either in the thread or as a reply
+        if "thread_ts" in event:
+            app.client.chat_postMessage(
+                channel=event["channel"],
+                thread_ts=event["thread_ts"],
+                text=output_str,
+            )
+        else:
+            say(output_str)
 
 
 if __name__ == "__main__":
