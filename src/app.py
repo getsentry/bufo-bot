@@ -87,8 +87,12 @@ def big_bufo(ack, respond):
 
 
 @app.event("app_mention")
-def handle_app_mention(say, event):
-    user_input = event["text"].lower().strip()
+def handle_app_mention(say, event, context):
+    bot_user_id = context["bot_user_id"]
+
+    # Remove the bot mention from the text
+    full_text = event["text"]
+    user_input = full_text.replace(f"<@{bot_user_id}>", "").strip().lower()
 
     if user_input == "random":
         emoji = random.choice(bufo_suggester.emoji_list)
