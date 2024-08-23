@@ -143,10 +143,10 @@ HOME_TAB_VIEW = {
 
 
 @app.event("app_home_opened")
-def update_home_tab(client, event, logger):
+def update_home_tab(event):
     try:
         # Call the views.publish method using the WebClient passed to the handler
-        client.views_publish(
+        app.client.views_publish(
             user_id=event["user"],
             view=HOME_TAB_VIEW,
         )
