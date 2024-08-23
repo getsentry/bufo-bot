@@ -88,15 +88,15 @@ def big_bufo(ack, respond):
 
 @app.event("app_mention")
 def handle_app_mention(say, event):
-    user_input = event["text"].lower()
+    user_input = event["text"].lower().strip()
 
-    if "random" in user_input:
+    if user_input == "random":
         emoji = random.choice(bufo_suggester.emoji_list)
         say(f":{emoji}:")
-    elif "bigbufo" in user_input:
+    elif user_input == "bigbufo":
         emoji = random.choice(BIG_BUFOS)
         say(f"{emoji}")
-    elif "react" in user_input:
+    elif user_input == "react":
         # Check if the mention is in a thread
         if "thread_ts" in event:
             # Get the parent message
@@ -127,6 +127,22 @@ def handle_app_mention(say, event):
                     )
                 except Exception as e:
                     logger.error(f"Error adding reaction: {e}")
+    # if mentioned with a message, suggest bufos
+    else:
+        # Send an ephemeral thinking message
+        app.client.chat_postEphemeral(
+            channel=event["channel"],
+            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
+        )
+
+        suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
+        validated_suggestions = bufo_suggester.validate_bufos_suggestions(
+            suggested_emojis
+        )
+        response = bufo_suggester.build_bufo_suggestions_response(validated_suggestions)
+
+        output_str = f"Bufos for `{user_input}`:\n{response}"
+        say(output_str)
 
 
 if __name__ == "__main__":
