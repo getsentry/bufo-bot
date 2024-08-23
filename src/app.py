@@ -1,12 +1,23 @@
 from __future__ import annotations
 
+import logging
 import os
 import random
 
+import sentry_sdk
 from dotenv import load_dotenv
 from slack_bolt import App
 
 from bufo_suggester import BufoSuggester
+
+sentry_sdk.init(
+    dsn="https://82cca006fe375b5ff101d7d5c6764c47@o4506792933130240.ingest.us.sentry.io/4507827653246976",
+    traces_sample_rate=1.0,
+    profiles_sample_rate=1.0,
+)
+
+
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -115,7 +126,7 @@ def handle_app_mention(say, event):
                         name=emoji,
                     )
                 except Exception as e:
-                    print(f"Error adding reaction {emoji}: {e}")
+                    logger.error(f"Error adding reaction: {e}")
 
 
 if __name__ == "__main__":

@@ -48,18 +48,3 @@ class BufoSuggester:
         return "\n".join(
             [f":{emoji}: `:{emoji}:`" for emoji in validated_bufo_suggestions]
         )
-
-
-# This is a simple main function to test the BufoSuggester class
-def main():
-    suggester = BufoSuggester()
-    user_text = input("Enter your message: ")
-    suggestions = suggester.get_bufo_suggestions(user_text)
-    validated_suggestions = suggester.validate_bufos_suggestions(suggestions)
-    response = suggester.build_bufo_suggestions_response(validated_suggestions)
-
-    print(f"Suggested Bufo emojis: {response}")
-
-
-if __name__ == "__main__":
-    main()

@@ -27,3 +27,9 @@ This project suggests Bufo emojis based on user input.
    SLACK_BOT_TOKEN=your_bot_token_here
    SLACK_SIGNING_SECRET=your_signing_secret_here
    ```
+
+5. Run the app:
+
+   ```bash
+   python src/app.py
+   ```
