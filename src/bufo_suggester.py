@@ -1,8 +1,6 @@
 import os
 import random
-from wsgiref import validate
 
-import anthropic
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -16,15 +14,8 @@ EMOJI_LIST_FILE = "bufo_emoji_list.txt"
 
 
 class BufoSuggester:
-    def __init__(self, client_type: str | None = "openai"):
-        if client_type == "openai":
-            self.client_type = client_type
-            self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-        elif client_type == "anthropic":
-            self.client_type = client_type
-            self.client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
-        else:
-            raise ValueError("Invalid client type")
+    def __init__(self):
+        self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
         instructions = self._load_file(PROMPT_FILE)
         emojis = self._load_file(EMOJI_LIST_FILE)
@@ -32,56 +23,31 @@ class BufoSuggester:
 
         self.system_prompt = instructions + "\n\n" + emojis
 
-
     @staticmethod
     def _load_file(filename: str) -> str:
         file_path = os.path.join(PROMPT_DIR, filename)
-        with open(file_path, 'r') as file:
+        with open(file_path, "r") as file:
             return file.read()
 
     def get_bufo_suggestions(self, user_input: str) -> str:
-        if self.client_type == "openai":
-            response = self.client.chat.completions.create(
-                model=MODEL_TYPE,
-                messages=[
-                    {"role": "system", "content": self.system_prompt},
-                    {"role": "user", "content": user_input}
-                ]
-            )
-            print(response.choices[0].message.content)
-            return response.choices[0].message.content
-
-        elif self.client_type == "anthropic":
-            message = self.client.messages.create(
-                model="claude-3-5-sonnet-20240620",
-                max_tokens=1000,
-                temperature=0,
-                system=self.system_prompt,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": [
-                            {
-                                "type": "text",
-                                "text": user_input
-                            }
-                        ]
-                    }
-                ]
-            )
-            print(message.content)
-            return message.content
-
-        return ""
+        response = self.client.chat.completions.create(
+            model=MODEL_TYPE,
+            messages=[
+                {"role": "system", "content": self.system_prompt},
+                {"role": "user", "content": user_input},
+            ],
+        )
+        return response.choices[0].message.content
 
     def validate_bufos_suggestions(self, suggestions: str) -> list[str]:
         emojis = suggestions.split()
         validated_emojis = [emoji for emoji in emojis if emoji in self.emoji_list]
         return random.sample(validated_emojis, min(5, len(validated_emojis)))
 
-
     def build_bufo_suggestions_response(self, validated_bufo_suggestions: str) -> str:
-        return "\n".join([f":{emoji}: `:{emoji}:`" for emoji in validated_bufo_suggestions])
+        return "\n".join(
+            [f":{emoji}: `:{emoji}:`" for emoji in validated_bufo_suggestions]
+        )
 
 
 # This is a simple main function to test the BufoSuggester class

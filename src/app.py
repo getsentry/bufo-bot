@@ -3,9 +3,10 @@ from __future__ import annotations
 import os
 import random
 
-from bufo_suggester import BufoSuggester
 from dotenv import load_dotenv
 from slack_bolt import App
+
+from bufo_suggester import BufoSuggester
 
 load_dotenv()
 
@@ -34,14 +35,14 @@ THINKING_EMOJIS = [
 
 BIG_BUFOS = [
     """
-:bigbufo_0_0::bigbufo_1_0::bigbufo_2_0::bigbufo_3_0:
-:bigbufo_0_1::bigbufo_1_1::bigbufo_2_1::bigbufo_3_1:
-:bigbufo_0_2::bigbufo_1_2::bigbufo_2_2::bigbufo_3_2:
-:bigbufo_0_3::bigbufo_1_3::bigbufo_2_3::bigbufo_3_3:
+    :bigbufo_0_0::bigbufo_1_0::bigbufo_2_0::bigbufo_3_0:
+    :bigbufo_0_1::bigbufo_1_1::bigbufo_2_1::bigbufo_3_1:
+    :bigbufo_0_2::bigbufo_1_2::bigbufo_2_2::bigbufo_3_2:
+    :bigbufo_0_3::bigbufo_1_3::bigbufo_2_3::bigbufo_3_3:
     """,
     """
-:yay-bufo-1::yay-bufo-2:
-:yay-bufo-3::yay-bufo-4:
+    :yay-bufo-1::yay-bufo-2:
+    :yay-bufo-3::yay-bufo-4:
     """,
 ]
 
@@ -58,7 +59,7 @@ def bufo(ack, respond, command):
         text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
     )
 
-    # Get OpenAI response for the user input
+    # Get response for the user input
     suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
     validated_suggestions = bufo_suggester.validate_bufos_suggestions(suggested_emojis)
     response = bufo_suggester.build_bufo_suggestions_response(validated_suggestions)
@@ -69,13 +70,13 @@ def bufo(ack, respond, command):
 
 
 @app.command("/bigbufo")
-def big_bufo(ack, respond, command):
+def big_bufo(ack, respond):
     ack()
     respond(text=random.choice(BIG_BUFOS))
 
 
 @app.event("app_mention")
-def handle_app_mention(body, say, event):
+def handle_app_mention(say, event):
     user_input = event["text"].lower()
 
     if "random" in user_input:
@@ -92,14 +93,18 @@ def handle_app_mention(body, say, event):
                 channel=event["channel"],
                 latest=event["thread_ts"],
                 limit=1,
-                inclusive=True
+                inclusive=True,
             )["messages"][0]
 
-            # Get suggested bufos for the parent message text
-            print(f"Parent message text: {parent_message['text']}")
-            suggested_emojis = bufo_suggester.get_bufo_suggestions(parent_message["text"])
-            validated_suggestions = bufo_suggester.validate_bufos_suggestions(suggested_emojis)
-            validated_suggestions = random.sample(validated_suggestions, min(5, len(validated_suggestions)))
+            suggested_emojis = bufo_suggester.get_bufo_suggestions(
+                parent_message["text"]
+            )
+            validated_suggestions = bufo_suggester.validate_bufos_suggestions(
+                suggested_emojis
+            )
+            validated_suggestions = random.sample(
+                validated_suggestions, min(5, len(validated_suggestions))
+            )
 
             # React to the parent message with the suggested bufos
             for emoji in validated_suggestions:
@@ -107,7 +112,7 @@ def handle_app_mention(body, say, event):
                     app.client.reactions_add(
                         channel=event["channel"],
                         timestamp=parent_message["ts"],
-                        name=emoji
+                        name=emoji,
                     )
                 except Exception as e:
                     print(f"Error adding reaction {emoji}: {e}")
