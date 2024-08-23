@@ -57,6 +57,102 @@ BIG_BUFOS = [
     """,
 ]
 
+HOME_TAB_VIEW = {
+    "type": "home",
+    "blocks": [
+        {
+            "type": "header",
+            "text": {
+                "type": "plain_text",
+                "text": "Welcome to BufoBot! 🐸",
+                "emoji": True,
+            },
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "BufoBot is your friendly neighborhood Bufo emoji assistant. Here's what I can do for you:",
+            },
+        },
+        {"type": "divider"},
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*1. Suggest Bufo Emojis* 🎭\nUse `/bufo [your text]` to get Bufo emoji suggestions related to your text.",
+            },
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*2. Display Big Bufos* 🖼️\nType `/bigbufo` to summon a large Bufo emoji display.",
+            },
+        },
+        {
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": "*3. Mention Me* 💬"},
+        },
+        {
+            "type": "context",
+            "elements": [
+                {
+                    "type": "mrkdwn",
+                    "text": "• `@BufoBot random`: I'll respond with a random Bufo emoji.",
+                }
+            ],
+        },
+        {
+            "type": "context",
+            "elements": [
+                {
+                    "type": "mrkdwn",
+                    "text": "• `@BufoBot bigbufo`: I'll show you a big Bufo composition.",
+                }
+            ],
+        },
+        {
+            "type": "context",
+            "elements": [
+                {
+                    "type": "mrkdwn",
+                    "text": "• `@BufoBot react`: In a thread, I'll react to the parent message with relevant Bufos.",
+                }
+            ],
+        },
+        {
+            "type": "context",
+            "elements": [
+                {
+                    "type": "mrkdwn",
+                    "text": "• `@BufoBot [any text]`: I'll suggest Bufo emojis related to your text.",
+                }
+            ],
+        },
+        {"type": "divider"},
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "Let's make your Slack conversations more Bufo-tastic! 🐸✨",
+            },
+        },
+    ],
+}
+
+
+@app.event("app_home_opened")
+def update_home_tab(client, event, logger):
+    try:
+        # Call the views.publish method using the WebClient passed to the handler
+        client.views_publish(
+            user_id=event["user"],
+            view=HOME_TAB_VIEW,
+        )
+    except Exception as e:
+        logger.error(f"Error publishing home tab: {e}")
+
 
 @app.command("/bufo")
 def bufo(ack, respond, command):
