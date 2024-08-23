@@ -132,6 +132,7 @@ def handle_app_mention(say, event):
         # Send an ephemeral thinking message
         app.client.chat_postEphemeral(
             channel=event["channel"],
+            user=event["user"],
             text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
         )
 
