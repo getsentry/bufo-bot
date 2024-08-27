@@ -196,39 +196,6 @@ def handle_app_mention(say, event, context):
     elif user_input == "bigbufo":
         emoji = random.choice(BIG_BUFOS)
         say(f"{emoji}")
-    # Killin' the react feature for now
-    # elif user_input == "react":
-    #     # Check if the mention is in a thread
-    #     if "thread_ts" in event:
-    #         # Get the parent message
-    #         parent_message = app.client.conversations_history(
-    #             channel=event["channel"],
-    #             latest=event["thread_ts"],
-    #             limit=1,
-    #             inclusive=True,
-    #         )["messages"][0]
-
-    #         suggested_emojis = bufo_suggester.get_bufo_suggestions(
-    #             parent_message["text"]
-    #         )
-    #         validated_suggestions = bufo_suggester.validate_bufos_suggestions(
-    #             suggested_emojis
-    #         )
-    #         validated_suggestions = random.sample(
-    #             validated_suggestions, min(5, len(validated_suggestions))
-    #         )
-
-    #         # React to the parent message with the suggested bufos
-    #         for emoji in validated_suggestions:
-    #             try:
-    #                 app.client.reactions_add(
-    #                     channel=event["channel"],
-    #                     timestamp=parent_message["ts"],
-    #                     name=emoji,
-    #                 )
-    #             except Exception as e:
-    #                 logger.error(f"Error adding reaction: {e}")
-
     # if mentioned with a message, react to the message with bufos
     else:
         suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
