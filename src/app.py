@@ -60,7 +60,7 @@ BIG_BUFOS = [
 :bufo-blank-stare_0_1::bufo-blank-stare_1_1:
     """,
     """
-    :bufo-wider-01::bufo-wider-02::bufo-wider-03::bufo-wider-04:
+:bufo-wider-01::bufo-wider-02::bufo-wider-03::bufo-wider-04:
     """,
 ]
 
@@ -202,6 +202,15 @@ def handle_app_mention(say, event, context):
         say(f":{emoji}:")
     elif user_input == "bigbufo":
         emoji = random.choice(BIG_BUFOS)
+        say(f"{emoji}")
+    elif user_input == "bigbufo excited":
+        emoji = BIG_BUFOS[1]
+        say(f"{emoji}")
+    elif user_input == "bigbufo stare":
+        emoji = BIG_BUFOS[2]
+        say(f"{emoji}")
+    elif user_input == "bigbufo wide":
+        emoji = BIG_BUFOS[3]
         say(f"{emoji}")
     # if mentioned with a message, react to the message with bufos
     else:
