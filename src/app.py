@@ -55,6 +55,13 @@ BIG_BUFOS = [
 :yay-bufo-1::yay-bufo-2:
 :yay-bufo-3::yay-bufo-4:
     """,
+    """
+:bufo-blank-stare_0_0::bufo-blank-stare_1_0:
+:bufo-blank-stare_0_1::bufo-blank-stare_1_1:
+    """,
+    """
+    :bufo-wider-01::bufo-wider-02::bufo-wider-03::bufo-wider-04:
+    """,
 ]
 
 HOME_TAB_VIEW = {
