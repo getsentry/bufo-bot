@@ -1,6 +1,7 @@
 import os
 import random
 
+import sentry_sdk
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -29,6 +30,7 @@ class BufoSuggester:
         with open(file_path, "r") as file:
             return file.read()
 
+    @sentry_sdk.trace
     def get_bufo_suggestions(self, user_input: str) -> str:
         response = self.client.chat.completions.create(
             model=MODEL_TYPE,
