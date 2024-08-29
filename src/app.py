@@ -6,6 +6,7 @@ import random
 
 import sentry_sdk
 from dotenv import load_dotenv
+from sentry_sdk import set_user
 from slack_bolt import App
 
 from bufo_suggester import BufoSuggester
@@ -178,6 +179,7 @@ def bufo_help(ack, respond):
 @app.command("/bufo")
 def bufo(ack, respond, command):
     ack()
+    set_user({"id": command["user_id"]})
     user_input = command["text"]
 
     # Send an ephemeral thinking message
@@ -205,6 +207,7 @@ def big_bufo(ack, respond):
 
 @app.event("app_mention")
 def handle_app_mention(say, event, context):
+    set_user({"id": event["user"]})
     bot_user_id = context["bot_user_id"]
 
     # Remove the bot mention from the text
