@@ -183,11 +183,12 @@ def bufo(ack, respond, command):
     user_input = command["text"]
 
     # Send an ephemeral thinking message
-    app.client.chat_postEphemeral(
-        channel=command["channel_id"],
-        user=command["user_id"],
-        text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
-    )
+    if not command["channel_id"].startswith("D"):
+        app.client.chat_postEphemeral(
+            channel=command["channel_id"],
+            user=command["user_id"],
+            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
+        )
 
     # Get response for the user input
     suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
