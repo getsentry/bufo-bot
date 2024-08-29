@@ -180,19 +180,11 @@ def bufo(ack, respond, command):
     user_input = command["text"]
 
     # Send an ephemeral thinking message
-    if command["channel_id"].startswith("D"):
-        # DM channel
-        app.client.chat_postEphemeral(
-            channel=command["user_name"],
-            user=command["user_id"],
-            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
-        )
-    else:
-        app.client.chat_postEphemeral(
-            channel=command["channel_id"],
-            user=command["user_id"],
-            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
-        )
+    app.client.chat_postEphemeral(
+        channel=command["channel_id"],
+        user=command["user_id"],
+        text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
+    )
 
     # Get response for the user input
     suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
@@ -201,14 +193,7 @@ def bufo(ack, respond, command):
 
     output_str = f"Bufos for `{user_input}`:\n{response}"
 
-    if command["channel_id"].startswith("D"):
-        app.client.chat_postEphemeral(
-            channel=command["user_name"],
-            user=command["user_id"],
-            text=output_str,
-        )
-    else:
-        respond(text=output_str)
+    respond(text=output_str)
 
 
 @app.command("/bigbufo")
