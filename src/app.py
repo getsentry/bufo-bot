@@ -151,7 +151,6 @@ HOME_TAB_VIEW = {
 
 
 @app.event("app_home_opened")
-@sentry_sdk.trace
 def update_home_tab(event):
     try:
         # Call the views.publish method using the WebClient passed to the handler
@@ -164,7 +163,6 @@ def update_home_tab(event):
 
 
 @app.command("/bufohelp")
-@sentry_sdk.trace
 def bufo_help(ack, respond):
     ack()
     respond(
@@ -178,7 +176,6 @@ def bufo_help(ack, respond):
 
 
 @app.command("/bufo")
-@sentry_sdk.trace
 def bufo(ack, respond, command):
     ack()
     user_input = command["text"]
@@ -201,14 +198,12 @@ def bufo(ack, respond, command):
 
 
 @app.command("/bigbufo")
-@sentry_sdk.trace
 def big_bufo(ack, respond):
     ack()
     respond(text=random.choice(BIG_BUFOS))
 
 
 @app.event("app_mention")
-@sentry_sdk.trace
 def handle_app_mention(say, event, context):
     bot_user_id = context["bot_user_id"]
 

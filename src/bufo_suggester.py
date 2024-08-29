@@ -30,16 +30,16 @@ class BufoSuggester:
         with open(file_path, "r") as file:
             return file.read()
 
-    @sentry_sdk.trace
     def get_bufo_suggestions(self, user_input: str) -> str:
-        response = self.client.chat.completions.create(
-            model=MODEL_TYPE,
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": user_input},
-            ],
-        )
-        return response.choices[0].message.content
+        with sentry_sdk.start_transaction(op="http", name="get_bufo_suggestions"):
+            response = self.client.chat.completions.create(
+                model=MODEL_TYPE,
+                messages=[
+                    {"role": "system", "content": self.system_prompt},
+                    {"role": "user", "content": user_input},
+                ],
+            )
+            return response.choices[0].message.content
 
     def validate_bufos_suggestions(self, suggestions: str) -> list[str]:
         emojis = suggestions.split()
