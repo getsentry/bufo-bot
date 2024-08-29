@@ -161,17 +161,38 @@ def update_home_tab(event):
         logger.error(f"Error publishing home tab: {e}")
 
 
+@app.command("/bufohelp")
+def bufo_help(ack, respond):
+    ack()
+    respond(
+        text="Here's how you can use BufoBot:\n"
+        "`/bufo [your text]`: Get Bufo emoji suggestions related to your text (only you can see it)\n"
+        "`/bigbufo`: BIGBUFO (only you can see it)\n"
+        "`@BufoBot random`: Get a random bufo\n"
+        "`@BufoBot bigbufo [optional: excited, stare, wide]`: BIG BUFO\n"
+        "`@BufoBot [any text]`: Bufobot will react with bufos"
+    )
+
+
 @app.command("/bufo")
 def bufo(ack, respond, command):
     ack()
     user_input = command["text"]
 
     # Send an ephemeral thinking message
-    app.client.chat_postEphemeral(
-        channel=command["channel_id"],
-        user=command["user_id"],
-        text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
-    )
+    if command["channel_id"].startswith("D"):
+        # DM channel
+        app.client.chat_postEphemeral(
+            channel=command["user_name"],
+            user=command["user_id"],
+            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
+        )
+    else:
+        app.client.chat_postEphemeral(
+            channel=command["channel_id"],
+            user=command["user_id"],
+            text=f"Thinking... {random.choice(THINKING_EMOJIS)}",
+        )
 
     # Get response for the user input
     suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
@@ -180,7 +201,14 @@ def bufo(ack, respond, command):
 
     output_str = f"Bufos for `{user_input}`:\n{response}"
 
-    respond(text=output_str)
+    if command["channel_id"].startswith("D"):
+        app.client.chat_postEphemeral(
+            channel=command["user_name"],
+            user=command["user_id"],
+            text=output_str,
+        )
+    else:
+        respond(text=output_str)
 
 
 @app.command("/bigbufo")
@@ -201,7 +229,7 @@ def handle_app_mention(say, event, context):
         emoji = random.choice(bufo_suggester.emoji_list)
         say(f":{emoji}:")
     elif user_input == "bigbufo":
-        emoji = random.choice(BIG_BUFOS)
+        emoji = BIG_BUFOS[0]
         say(f"{emoji}")
     elif user_input == "bigbufo excited":
         emoji = BIG_BUFOS[1]
