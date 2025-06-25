@@ -66,6 +66,22 @@ BIG_BUFOS = [
     """,
 ]
 
+# Custom responses for "{something} me" pattern
+CUSTOM_RESPONSES = {
+    "raj": [
+        "can i bum a scroll :bufo-pleading:",
+    ],
+    "cathy": [
+        "migratino :cocktail:",
+    ],
+    "christina": [
+        ":bufo-pog-surprise: :bufo-pog-surprise: :bufo-pog-surprise: !! poggers !! :bufo-pog-surprise: :bufo-pog-surprise: :bufo-pog-surprise:",
+    ],
+    "mifu": [
+        "i'm going to trap everyone in fire again :fire_elmo:",
+    ],
+}
+
 HOME_TAB_VIEW = {
     "type": "home",
     "blocks": [
@@ -230,6 +246,16 @@ def handle_app_mention(say, event, context):
     elif user_input == "bigbufo wide":
         emoji = BIG_BUFOS[3]
         say(f"{emoji}")
+    # Check for "{something} me" pattern
+    elif user_input.endswith(" me"):
+        # Extract the action part (everything before " me")
+        action = user_input[:-3].strip()
+        if action in CUSTOM_RESPONSES:
+            response = random.choice(CUSTOM_RESPONSES[action])
+            say(response)
+        else:
+            # Fallback for unknown actions
+            say(f"🐸 I don't know what {action} means, but here's a bufo anyway! :bufo-good-vibe:")
     # if mentioned with a message, react to the message with bufos
     else:
         suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)
