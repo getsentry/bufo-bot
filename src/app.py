@@ -167,6 +167,12 @@ HOME_TAB_VIEW = {
 }
 
 
+def escape_mrkdwn(text: str) -> str:
+    # Slack renders <!channel>, <!here> and <url|label> in bot messages even with
+    # parse=none, so user text must be escaped before it is echoed back publicly.
+    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 @app.event("app_home_opened")
 def update_home_tab(event):
     try:
@@ -255,7 +261,10 @@ def handle_app_mention(say, event, context):
             say(response)
         else:
             # Fallback for unknown actions
-            say(f"🐸 I don't know what {action} means, but here's a bufo anyway! :bufo-good-vibe:")
+            say(
+                f"🐸 I don't know what {escape_mrkdwn(action)} means, "
+                "but here's a bufo anyway! :bufo-good-vibe:"
+            )
     # if mentioned with a message, react to the message with bufos
     else:
         suggested_emojis = bufo_suggester.get_bufo_suggestions(user_input)

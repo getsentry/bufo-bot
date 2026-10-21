@@ -6,6 +6,7 @@ australian-bufo
 awesomebufo
 be-the-bufo-you-want-to-see
 blockheads-bufo
+boofo
 breaking-bufo
 bronze-bufo
 buff-bufo
@@ -15,6 +16,7 @@ bufo-0-10
 bufo-10
 bufo-10-4
 bufo-2022
+bufo-accepts-a-popsicle
 bufo-achieving-coding-flow
 bufo-ack
 bufo-actually
@@ -59,6 +61,7 @@ bufo-away
 bufo-awkward-smile
 bufo-awkward-smile-nod
 bufo-ayy
+bufo-ayy-pi
 bufo-baby
 bufo-babysits-an-urgent-ticket
 bufo-back-pat
@@ -74,6 +77,7 @@ bufo-barbie
 bufo-barney
 bufo-barrister
 bufo-baseball
+bufo-basic-blush
 bufo-basketball
 bufo-batman
 bufo-be-my-valentine
@@ -114,6 +118,7 @@ bufo-boba
 bufo-boba-army
 bufo-boi
 bufo-boiii
+bufo-bon-appetit
 bufo-bongo
 bufo-bonk
 bufo-bops-you-on-the-head-with-a-baguette
@@ -135,6 +140,7 @@ bufo-breaks-tech-bros-heart
 bufo-breaks-up-with-you
 bufo-breaks-your-heart
 bufo-brick
+bufo-bright
 bufo-brings-a-new-meaning-to-brain-freeze-by-bopping-you-on-the-head-with-a-popsicle
 bufo-brings-a-new-meaning-to-gaveled-by-slamming-the-hammer-very-loud
 bufo-brings-magic-to-the-riot
@@ -144,7 +150,10 @@ bufo-broke-his-toe-and-isn't-sure-what-to-do-about-the-12k-he-signed-up-for
 bufo-broom
 bufo-brought-a-taco
 bufo-bufo
+bufo-business
 bufo-but-anatomically-correct
+bufo-but-his-arms-are-ho-scale-model-trains
+bufo-but-his-arms-are-lava-lamps
 bufo-but-instead-of-green-its-hotdogs
 bufo-but-instead-of-green-its-pizza
 bufo-but-you-can-feel-the-electro-house-music-in-the-gif-and-oh-yea-theres-also-a-dapper-chicken
@@ -179,6 +188,7 @@ bufo-caught-a-small-bufo
 bufo-caused-an-incident
 bufo-celebrate
 bufo-censored
+bufo-champions-trunk-based-development
 bufo-chappell-roan
 bufo-chatting
 bufo-check
@@ -212,6 +222,7 @@ bufo-cone-of-shame
 bufo-confetti
 bufo-confused
 bufo-congrats
+bufo-considers-tasting-the-tide-pod-just-this-one-time
 bufo-cookie
 bufo-cool-glasses
 bufo-corn
@@ -219,6 +230,7 @@ bufo-cornucopia
 bufo-covid
 bufo-cowboy
 bufo-cozy-blanky
+bufo-crazy
 bufo-crewmate-blue
 bufo-crewmate-blue-bounce
 bufo-crewmate-cyan
@@ -241,6 +253,7 @@ bufo-crewmates
 bufo-cries-into-his-beer
 bufo-crikey
 bufo-croptop
+bufo-crouton
 bufo-crumbs
 bufo-crustacean
 bufo-cry
@@ -262,6 +275,7 @@ bufo-dab
 bufo-dancing
 bufo-dapper
 bufo-dbz
+bufo-dead
 bufo-deal-with-it
 bufo-declines-your-suppository-offer
 bufo-deep-hmm
@@ -290,6 +304,7 @@ bufo-doesnt-believe-you
 bufo-doesnt-understand-how-this-meeting-isnt-an-email
 bufo-doesnt-wanna-get-out-of-the-bath-yet
 bufo-dog
+bufo-dolly
 bufo-domo
 bufo-done-check
 bufo-dont
@@ -308,6 +323,7 @@ bufo-drake-yes
 bufo-drifts-through-the-void
 bufo-drinking-baja-blast
 bufo-drinking-boba
+bufo-drinking-claude-code
 bufo-drinking-coffee
 bufo-drinking-coke
 bufo-drinking-pepsi
@@ -319,6 +335,7 @@ bufo-drowns-in-memories-of-ocean
 bufo-drowns-in-tickets-but-ok
 bufo-drumroll
 bufo-easter-bunny
+bufo-eating-bufo-dog
 bufo-eating-hotdog
 bufo-eating-lollipop
 bufo-eats-a-bufo-taco
@@ -355,6 +372,7 @@ bufo-fails-the-vibe-check
 bufo-fancy-tea
 bufo-farmer
 bufo-fastest-rubber-stamp-in-the-west
+bufo-fears-the-full-moon
 bufo-fedora
 bufo-feel-better
 bufo-feeling-pretty-might-delete-later
@@ -383,14 +401,18 @@ bufo-football
 bufo-for-dummies
 bufo-forgot-how-to-type
 bufo-forgot-that-you-existed-it-isnt-love-it-isnt-hate-its-just-indifference
+bufo-forgot-to-charge-his-airpods-before-the-flight-and-now-has-to-be-alone-with-his-thoughts
+bufo-found-a-cockroach-in-the-office
 bufo-found-some-more-leeks
 bufo-found-the-leeks
 bufo-found-yet-another-juicebox
+bufo-frank-n-furter
 bufo-french
 bufo-friends
 bufo-frustrated-with-flower
 bufo-fun-is-over
 bufo-furiously-tries-to-write-python
+bufo-furiously-trying-to-cycle-but-legs-too-short
 bufo-furiously-writes-an-epic-update
 bufo-furiously-writes-you-a-peer-review
 bufo-futbol
@@ -414,6 +436,7 @@ bufo-gets-uploaded-to-the-cloud
 bufo-gets-whiplash
 bufo-ghost
 bufo-ghost-costume
+bufo-giga-chad
 bufo-giggling-in-a-cat-onesie
 bufo-give
 bufo-give-money
@@ -427,6 +450,7 @@ bufo-gives-croissant
 bufo-gives-databricks
 bufo-gives-j
 bufo-gives-star
+bufo-gives-vin-diesel-a-gentle-little-kiss-on-his-shiny-head
 bufo-gives-you-a-feature-flag
 bufo-gives-you-a-hotdog
 bufo-gives-you-some-extra-brain
@@ -446,6 +470,7 @@ bufo-grapes
 bufo-grasping-at-straws
 bufo-grenade
 bufo-grimaces-with-eyebrows
+bufo-grin
 bufo-guitar
 bufo-ha-ha
 bufo-hacker
@@ -511,7 +536,9 @@ bufo-hipster
 bufo-hmm
 bufo-hmm-no
 bufo-hmm-yes
+bufo-holding-back-tears
 bufo-holding-space-for-defying-gravity
+bufo-holds-claude-code
 bufo-holds-pumpkin
 bufo-homologates
 bufo-hop-in-we're-going-to-flavortown
@@ -520,9 +547,11 @@ bufo-hopes-you-are-having-a-good-day
 bufo-hot-pocket
 bufo-hotdog-rocket
 bufo-howdy
+bufo-huffing
 bufo-hug
 bufo-hugs-moo-deng
 bufo-hype
+bufo-hypno
 bufo-i-just-love-it-so-much
 bufo-ice-cream
 bufo-idk
@@ -534,6 +563,8 @@ bufo-in-his-cozy-bed-hoping-he-never-gets-capitated
 bufo-in-rome
 bufo-inception
 bufo-increases-his-dimensionality-while-trapped-in-the-void
+bufo-indulges-in-a-hot-dog-omakase
+bufo-injects-claude-code
 bufo-innocent
 bufo-inspecting
 bufo-inspired
@@ -547,13 +578,19 @@ bufo-iron-throne
 bufo-ironside
 bufo-is-a-little-worried-but-still-trying-to-be-supportive
 bufo-is-a-part-of-gen-z
+bufo-is-a-steak-holder
 bufo-is-about-to-zap-you
 bufo-is-all-ears
+bufo-is-an-ai-generated-meerkat
+bufo-is-an-anime-geisha
 bufo-is-angry-at-the-water-cooler-bottle-company-for-missing-yet-another-delivery
 bufo-is-at-his-wits-end
 bufo-is-at-the-dentist
 bufo-is-better-known-for-the-things-he-does-on-the-mattress
+bufo-is-doing-doordash-deliveries-in-the-evenings-because-he-lost-the-family-savings-on-memecoins
+bufo-is-eating-halal-and-is-also-halal
 bufo-is-exhausted-rooting-for-the-antihero
+bufo-is-fixing-it-dont-you-worry
 bufo-is-flying-and-is-the-plane
 bufo-is-getting-abducted
 bufo-is-getting-paged-now
@@ -568,11 +605,13 @@ bufo-is-it-done
 bufo-is-jealous-its-your-birthday
 bufo-is-jean-baptise-emanuel-zorg
 bufo-is-keeping-his-eye-on-you
+bufo-is-living-the-life-of-a-showgirl
 bufo-is-lonely
 bufo-is-lost
 bufo-is-lost-in-the-void
 bufo-is-omniscient
 bufo-is-on-a-sled
+bufo-is-only-allowed-to-eat-foods-that-dont-require-chewing
 bufo-is-panicking
 bufo-is-petting-your-cat
 bufo-is-petting-your-dog
@@ -587,11 +626,14 @@ bufo-is-ready-to-slay-the-dragon
 bufo-is-romantic
 bufo-is-sad-no-one-complimented-their-agent-47-cosplay
 bufo-is-safe-behind-bars
+bufo-is-sharpay
 bufo-is-so-happy-youre-here
+bufo-is-struggling-to-stay-awake-after-ordering-the-beef-wellington-at-lunch
 bufo-is-the-perfect-human-form
 bufo-is-unconcerned
 bufo-is-up-to-something
 bufo-is-very-upset-now
+bufo-is-vindicated-that-they-should-have-added-pitching-at-the-deadline-but-it-is-not-helping
 bufo-is-watching-you
 bufo-is-working-through-the-tears
 bufo-is-working-too-much
@@ -663,6 +705,7 @@ bufo-liberty-forgot-her-torch
 bufo-librarian
 bufo-lick
 bufo-licks-his-hway-out-of-prison
+bufo-licks-his-way-out-of-prison
 bufo-lies-awake-in-panic
 bufo-life-saver
 bufo-likes-that-idea
@@ -676,18 +719,22 @@ bufo-lol-cry
 bufo-lolsob
 bufo-long
 bufo-lookin-dope
+bufo-looking-for-reviews
 bufo-looking-very-much
 bufo-looks-a-little-closer
 bufo-looks-for-a-pull-request
 bufo-looks-for-an-issue
 bufo-looks-like-hes-listening-but-hes-not
 bufo-looks-out-of-the-window
+bufo-loves-bake-sale-brownies-so-much-that-it-got-him-to-vote-at-the-elementary-school
 bufo-loves-blobs
 bufo-loves-disco
 bufo-loves-doges
 bufo-loves-pho
+bufo-loves-potbelly-sandwich-company
 bufo-loves-rice-and-beans
 bufo-loves-ruby
+bufo-loves-the-lightning
 bufo-loves-this-song
 bufo-luigi
 bufo-lunch
@@ -701,6 +748,7 @@ bufo-make-it-rain
 bufo-makes-it-rain
 bufo-makes-the-dream-work
 bufo-mama-mia-thatsa-one-spicy-a-meatball
+bufo-marches-with-penguins
 bufo-marine
 bufo-mario
 bufo-mask
@@ -721,6 +769,7 @@ bufo-mischievous
 bufo-mitosis
 bufo-mittens
 bufo-modern-art
+bufo-monitoring-the-situation
 bufo-monocle
 bufo-monstera
 bufo-morning
@@ -733,9 +782,11 @@ bufo-my-pho
 bufo-nah
 bufo-naked
 bufo-naptime
+bufo-needs-2fa-but-lost-his-phone
 bufo-needs-some-hot-tea-to-process-this-news
 bufo-needs-to-vent
 bufo-nefarious
+bufo-nerd
 bufo-nervous
 bufo-nervous-but-cute
 bufo-night
@@ -749,6 +800,7 @@ bufo-no-ragrets
 bufo-no-sleep
 bufo-no-u
 bufo-nod
+bufo-nod-fast
 bufo-noodles
 bufo-nope
 bufo-nosy
@@ -814,6 +866,7 @@ bufo-offers-a-roomba
 bufo-offers-a-ruby
 bufo-offers-a-sandbox
 bufo-offers-a-shocked-pikachu
+bufo-offers-a-sigma-dashboard
 bufo-offers-a-speedy-recovery
 bufo-offers-a-status
 bufo-offers-a-taco
@@ -842,6 +895,7 @@ bufo-offers-avocado
 bufo-offers-bento
 bufo-offers-big-band-aid-for-a-little-problem
 bufo-offers-bitcoin
+bufo-offers-blanket
 bufo-offers-boba
 bufo-offers-boss-coffee
 bufo-offers-box
@@ -854,6 +908,7 @@ bufo-offers-caribufo
 bufo-offers-chart-with-upwards-trend
 bufo-offers-chatgpt
 bufo-offers-chrome
+bufo-offers-claude-code
 bufo-offers-coffee
 bufo-offers-copilot
 bufo-offers-corn
@@ -886,6 +941,7 @@ bufo-offers-hotdog
 bufo-offers-jira
 bufo-offers-ldap
 bufo-offers-lego
+bufo-offers-lightbulb
 bufo-offers-model-1857-12-pounder-napoleon-cannon
 bufo-offers-moneybag
 bufo-offers-new-jira
@@ -894,16 +950,23 @@ bufo-offers-notion
 bufo-offers-oatmilk
 bufo-offers-openai
 bufo-offers-pancakes
+bufo-offers-pdl-logo
+bufo-offers-pdl-turkey
+bufo-offers-peace
 bufo-offers-peanuts
 bufo-offers-pineapple
 bufo-offers-power
 bufo-offers-prescription-strength-painkillers
 bufo-offers-python
+bufo-offers-ramp
+bufo-offers-s3-bucket
 bufo-offers-securifriend
 bufo-offers-slack
 bufo-offers-solar-eclipse
 bufo-offers-spam
 bufo-offers-stash-of-tea-from-the-office-for-the-weekend
+bufo-offers-stroopwafel
+bufo-offers-sympathy
 bufo-offers-tayto
 bufo-offers-terraform
 bufo-offers-the-cloud
@@ -914,6 +977,7 @@ bufo-offers-thread
 bufo-offers-thundercats
 bufo-offers-tim-tams
 bufo-offers-tree
+bufo-offers-turkey
 bufo-offers-turkish-delights
 bufo-offers-ube
 bufo-offers-watermelon
@@ -934,6 +998,7 @@ bufo-offers-you-the-best-emoji-culture-ever
 bufo-offers-you-the-moon
 bufo-offers-you-the-world
 bufo-offers-yubikey
+bufo-offers-zendesk
 bufo-office
 bufo-oh-hai
 bufo-oh-no
@@ -955,6 +1020,7 @@ bufo-pager-duty
 bufo-pajama-party
 bufo-palpatine
 bufo-panic
+bufo-panicking
 bufo-parrot
 bufo-party
 bufo-party-birthday
@@ -969,6 +1035,7 @@ bufo-pearly-whites
 bufo-peek
 bufo-peek-wall
 bufo-peeking
+bufo-penguin
 bufo-pensivity-turned-discomfort-upon-realization-of-reality
 bufo-phew
 bufo-phonecall
@@ -980,6 +1047,7 @@ bufo-pilot
 bufo-pinch-hitter
 bufo-pineapple
 bufo-ping
+bufo-ping-pong
 bufo-pirate
 bufo-pitchfork
 bufo-pitchforks
@@ -993,6 +1061,7 @@ bufo-pleading-1
 bufo-please
 bufo-pog
 bufo-pog-surprise
+bufo-pointing-at-you
 bufo-pointing-down-there
 bufo-pointing-over-there
 bufo-pointing-right-there
@@ -1020,6 +1089,7 @@ bufo-praying-his-qa-is-on-point
 bufo-prays-for-this-to-be-over-already
 bufo-prays-for-this-to-be-over-already-intensifies
 bufo-prays-to-azure
+bufo-prays-to-claude-code
 bufo-prays-to-nvidia
 bufo-prays-to-pagerduty
 bufo-preach
@@ -1030,6 +1100,7 @@ bufo-pride
 bufo-psychic
 bufo-pumpkin
 bufo-pumpkin-head
+bufo-purple-wig
 bufo-pushes-to-prod
 bufo-put-on-active-noise-cancelling-headphones-but-can-still-hear-you
 bufo-quadruple-vaccinated
@@ -1039,14 +1110,17 @@ bufo-rainbow
 bufo-rainbow-moustache
 bufo-raised-hand
 bufo-ramen
+bufo-ran-out-of-tokens
 bufo-reading
 bufo-reads-and-analyzes-doc
 bufo-reads-and-analyzes-doc-intensifies
 bufo-red-flags
+bufo-red-sox
 bufo-redacted
 bufo-regret
 bufo-remains-perturbed-from-the-void
 bufo-remembers-bad-time
+bufo-returns-to-the-cold-embrace-of-centerlink
 bufo-returns-to-the-void
 bufo-retweet
 bufo-reverse
@@ -1140,7 +1214,9 @@ bufo-skeledance
 bufo-skellington
 bufo-skellington-1
 bufo-skiing
+bufo-slaps-claude
 bufo-slay
+bufo-slaying-tho
 bufo-sleep
 bufo-slinging-bagels
 bufo-slowest-rubber-stamp-in-the-west
@@ -1165,6 +1241,7 @@ bufo-spit
 bufo-spooky-szn
 bufo-sports
 bufo-squad
+bufo-square
 bufo-squash
 bufo-sriracha
 bufo-stab
@@ -1190,6 +1267,7 @@ bufo-stopsign
 bufo-strains-his-neck
 bufo-strange
 bufo-strawberry
+bufo-stress-sweat
 bufo-strikes-a-deal
 bufo-strikes-the-match-he's-ready-for-inferno
 bufo-stripe
@@ -1212,6 +1290,7 @@ bufo-tada
 bufo-take-my-money
 bufo-takes-a-bath
 bufo-takes-bufo-give
+bufo-takes-croissant
 bufo-takes-five-corndogs-to-the-movies-by-himself-as-his-me-time
 bufo-takes-hotdog
 bufo-takes-slack
@@ -1299,6 +1378,7 @@ bufo-tired
 bufo-tired-of-rooting-for-the-anti-hero
 bufo-tired-yes
 bufo-toad
+bufo-toast
 bufo-tofu
 bufo-toilet-rocket
 bufo-tomato
@@ -1320,6 +1400,7 @@ bufo-tries-some-yummy-yummy-crossplane
 bufo-tries-to-fight-you-but-his-arms-are-too-short-so-count-yourself-lucky
 bufo-tries-to-hug-you-back-but-his-arms-are-too-short
 bufo-tries-to-hug-you-but-his-arms-are-too-short
+bufo-tries-to-play-it-cool-while-smuggling-a-chipotle-burrito-into-the-movie-theater
 bufo-triple-vaccinated
 bufo-tripping
 bufo-trying-to-relax-while-procrastinating-but-its-not-working
@@ -1338,6 +1419,7 @@ bufo-unlocked-transdimensional-travel-while-in-the-void
 bufo-uno
 bufo-upvote
 bufo-uses-100-percent-of-his-brain
+bufo-uses-his-birthday-wish-to-try-to-bring-rainforest-cafe-back
 bufo-uwu
 bufo-vaccinated
 bufo-vaccinates-you
@@ -1345,6 +1427,7 @@ bufo-vampire
 bufo-venom
 bufo-ventilator
 bufo-very-angry
+bufo-very-angry-intesifies
 bufo-vibe
 bufo-vibe-dance
 bufo-vomit
@@ -1360,6 +1443,7 @@ bufo-wants-a-refund
 bufo-wants-to-have-a-calm-and-civilized-conversation-with-you
 bufo-wants-to-know-your-spaghetti-policy-at-the-movies
 bufo-wants-to-return-his-vacuum-that-he-bought-at-costco-four-years-ago-for-a-full-refund
+bufo-wants-you
 bufo-wants-you-to-buy-his-crypto
 bufo-wards-off-the-evil-spirits
 bufo-warhol
@@ -1410,6 +1494,7 @@ bufo-with-a-pearl-earring
 bufo-wizard
 bufo-wizard-magic-charge
 bufo-wonders-if-deliciousness-of-this-cheese-is-worth-the-pain-his-lactose-intolerance-will-cause
+bufo-woop
 bufo-workin-up-a-sweat-after-eating-a-wendys-double-loaded-double-baked-baked-potato-during-summer
 bufo-worldstar
 bufo-worried
@@ -1420,6 +1505,8 @@ bufo-writes-a-doc
 bufo-wtf
 bufo-wut
 bufo-yah
+bufo-yankees
+bufo-yankees-fan-is-waiting-for-the-right-time-to-ask-how-youre-doing
 bufo-yay
 bufo-yay-awkward-eyes
 bufo-yay-confetti
@@ -1435,6 +1522,7 @@ bufo-yummy
 bufo-zoom
 bufo-zoom-right
 bufo_wants_his_money
+bufoberries
 bufobot
 bufochu
 bufocopter
@@ -1468,6 +1556,7 @@ child-bufo-only-has-deku-sticks-to-save-hyrule
 chonky-bufo-wants-to-be-held
 christmas-bufo-on-a-goose
 circle-of-bufo
+claude-take-the-wheel
 confused-math-bufo
 constipated-bufo-is-trying-his-hardest
 copper-bufo
@@ -1521,9 +1610,11 @@ low-fidelity-bufo-cant-believe-youve-done-this
 low-fidelity-bufo-concerned
 low-fidelity-bufo-excited
 low-fidelity-bufo-gets-whiplash
+lunar-new-year-bufo
 m-bufo
 maam-this-is-a-bufo
 many-bufos
+mardi-gras-bufo
 maybe-a-bufo-bigfoot
 mega-bufo
 mrs-bufo
@@ -1531,6 +1622,7 @@ my-name-is-buford-and-i-am-bufo's-father
 nobufo
 not-bufo
 nothing-inauthentic-bout-this-bufo-yeah-hes-the-real-thing-baby
+old-bufo-yells-at-claude-code
 old-bufo-yells-at-cloud
 old-bufo-yells-at-hubble
 old-man-yells-at-bufo
@@ -1583,6 +1675,8 @@ triumphant-bufo
 tsa-bufo-gropes-you
 two-bufos-beefin
 up-and-to-the-bufo
+vacation-bufo-is-vacationing
+vibecoder-bufo-demands-more-gpu-capacity
 vin-bufo
 vintage-bufo
 whatever-youre-doing-its-attracting-the-bufos
