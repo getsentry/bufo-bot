@@ -1,0 +1,26 @@
+# Secrets and local config
+.env
+.env.*
+
+# VCS and tooling
+.git
+.github
+.claude
+.vscode
+.pre-commit-config.yaml
+
+# Python environments and caches
+.venv
+venv
+env
+__pycache__
+*.py[cod]
+.mypy_cache
+.ruff_cache
+.pytest_cache
+
+# Docs and build config not needed at runtime
+README.md
+cloudbuild.yaml
+Dockerfile
+.dockerignore

@@ -1,6 +1,7 @@
+openai==3.36.0
 pre-commit==3.8.0
+python-dotenv==1.2.4
 ruff==0.6.1
-slack-bolt
-openai
-python-dotenv
-sentry-sdk
+sentry-sdk==2.72.0
+slack-bolt==1.30.0
+slack-sdk==3.45.0
