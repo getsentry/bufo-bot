@@ -37,7 +37,10 @@ class BufoSuggester:
             return file.read()
 
     def get_bufo_suggestions(self, user_input: str) -> str:
-        with sentry_sdk.start_transaction(op="http", name="get_bufo_suggestions"):
+        with sentry_sdk.start_span(
+            name="get_bufo_suggestions",
+            attributes={"sentry.op": "http"},
+        ):
             response = self.client.chat.completions.create(
                 model=MODEL_TYPE,
                 messages=[
