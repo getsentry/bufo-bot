@@ -7,15 +7,35 @@ import random
 import sentry_sdk
 from dotenv import load_dotenv
 from sentry_sdk import set_user
+from sentry_sdk.integrations.logging import LoggingIntegration
 from slack_bolt import App
 
 from bufo_suggester import BufoSuggester
 
+_PII_DENYLIST_TERMS = ["forwarded", "-ip", "remote-", "via", "-user"]
+
 sentry_sdk.init(
     dsn="https://82cca006fe375b5ff101d7d5c6764c47@o4506792933130240.ingest.us.sentry.io/4507827653246976",
     traces_sample_rate=1.0,
-    profiles_sample_rate=1.0,
-    enable_tracing=True,
+    profile_session_sample_rate=1.0,
+    profile_lifecycle="trace",
+    attach_stacktrace=False,
+    integrations=[LoggingIntegration(level=None, event_level=logging.ERROR)],
+    # SDK 3.x collects more by default than 2.x without `send_default_pii`.
+    # Keep request bodies, which 2.x also sent, and opt out of the rest.
+    data_collection={
+        "user_info": False,
+        "http_bodies": ["incoming_request"],
+        "graphql": {"document": False, "variables": False},
+        "gen_ai": {"inputs": False, "outputs": False},
+        "mcp": {"inputs": False, "outputs": False},
+        "database_query_data": False,
+        "queues": False,
+        "http_headers": {"request": {"mode": "denylist", "terms": _PII_DENYLIST_TERMS}},
+        "cookies": {"mode": "denylist", "terms": _PII_DENYLIST_TERMS},
+        "url_query_params": {"mode": "denylist", "terms": _PII_DENYLIST_TERMS},
+        "stack_frame_variables": {"mode": "denylist"},
+    },
 )
 
 
